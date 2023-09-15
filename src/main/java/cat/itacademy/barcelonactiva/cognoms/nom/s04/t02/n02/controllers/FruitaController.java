@@ -37,14 +37,14 @@ public class FruitaController implements IFruitaController {
 
 	@DeleteMapping("/fruita/delete/{id}")
 	@Override
-	public void delete(@PathVariable("id") Long id) {
+	public void delete(@PathVariable("id") String id) {
 		// delete fruita
 		fruitaRepository.deleteById(id);
 	}
 
 	@Override
 	@GetMapping("/fruita/getOne/{id}")
-	public Optional<Fruita> getOne(@PathVariable("id") Long id) {
+	public Optional<Fruita> getOne(@PathVariable("id") String id) {
 		return fruitaRepository.findById(id);
 	}
 

@@ -9,8 +9,8 @@ public interface IFruitaController {
 	
 	void add(Fruita fruita);
 	void update(Fruita fruita);
-	void delete(Long id);
-	Optional<Fruita> getOne(Long id);
+	void delete(String id);
+	Optional<Fruita> getOne(String id);
 	List<Fruita> getAll();
 
 }
